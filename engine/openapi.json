@@ -1,0 +1,62 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Sift API",
+    "version": "0.1.0",
+    "description": "Stateless, self-hostable API. Request body limit 5 MiB. No authentication is included; place behind your own gateway for public service."
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8787"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Server available"
+          }
+        }
+      }
+    },
+    "/v1/profile": {
+      "post": {
+        "summary": "CSV quality, without the guesswork.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "csv"
+                ],
+                "properties": {
+                  "csv": {
+                    "type": "string"
+                  },
+                  "baseline": {
+                    "type": "object",
+                    "description": "A previous Sift report; columns must have name and type."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Analysis result. Trellis includes feasible:false and a cycle witness for cyclic graphs."
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "413": {
+            "description": "Request exceeds 5 MiB"
+          }
+        }
+      }
+    }
+  }
+}

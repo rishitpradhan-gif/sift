@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "mode": "local streaming engine; not HTTP load test",
+  "rows": 1000000,
+  "bytes": 19277913,
+  "milliseconds": 1416,
+  "node": "v22.17.1",
+  "retained_distinct_per_column": [
+    256,
+    5,
+    256,
+    2
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "http_routes": [
+    "/",
+    "/worker.js",
+    "/core.mjs",
+    "/openapi.json",
+    "/api/profile",
+    "/downloads/sift-api.zip"
+  ],
+  "downloaded_bundle_tests": "passed",
+  "zip_sha256": "399196d47b32a04ae9af5b5985e8c45425b360112231789848e531fad788b4a6",
+  "browser_automation": "unavailable: executor rejects symlinked workspace root"
+}

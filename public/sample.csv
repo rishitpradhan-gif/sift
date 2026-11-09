@@ -1,0 +1,11 @@
+account,region,revenue,renewal,active
+001,West,1290,2026-12-01,true
+002,East,840,2026-12-12,true
+003,West,,2026-12-02,false
+004,North,2100,2026-12-14,true
+005,East,pending,2026-12-15,true
+006,South,730,2026-12-11,false
+007,North,920,2026-12-19,true
+008,West,1450,2026-12-20,true
+009,East,,2026-12-23,true
+010,South,650,2026-12-28,false
